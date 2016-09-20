@@ -55,7 +55,48 @@ These wireframes give a sketch of how the application should work. _Hint:_ Pay a
 1. Run `npm install` to import dependencies.
 1. Run `npm install --save-dev chai protractor` to add test dependencies.
 1. Run `npm install --save monk` to read from the database.
-1. Follow the [Protractor tutorial](http://www.protractortest.org/#/tutorial) or reference previous exercises to create your first acceptance test.
+1. Create `/test/conf.js` (from [Protractor tutorial](http://www.protractortest.org/#/tutorial)):
+```
+exports.config = {
+  specs: ['acceptance/*.js'],
+  framework: 'mocha',
+  mochaOpts: {
+    reporter: 'spec',
+    slow: 3000,
+    enableTimeouts: false
+  },
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  directConnect: true
+};
+```
+1. Create `test/acceptance/album_test.js` (from [Protractor tutorial](http://www.protractortest.org/#/tutorial)):
+
+```
+var http = require('http');
+var expect = require('chai').expect;
+var app = require('../../app');
+
+before(function() {
+  var server = http.createServer(app);
+  server.listen(0);
+  browser.baseUrl = 'http://localhost:' + server.address().port;
+  browser.ignoreSynchronization = true;
+});
+
+describe('Express CRUD', function() {
+  describe('Given I visit /users', function() {
+    it('Then I see the express default', function() {
+      browser.get('/users');
+      element(by.tagName('body')).getText().then(function(text) {
+        expect(text).to.equal('respond with a resource');
+      });
+    });
+
+  });
+});
+```
 
 ## Problems
 
