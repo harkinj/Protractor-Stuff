@@ -49,10 +49,19 @@ These wireframes give a sketch of how the application should work. _Hint:_ Pay a
 
 ![](wireframes/album-edit.png)
 
+## Getting started
+
+1. Use the `express .` command to create an empty skeleton in this directory.
+1. Run `npm install` to import dependencies.
+1. Run `npm install --save-dev chai protractor` to add test dependencies.
+1. Run `npm install --save monk` to read from the database.
+1. Follow the [Protractor tutorial](http://www.protractortest.org/#/tutorial) or reference previous exercises to create your first acceptance test.
+
 ## Problems
 
 1. Complete the CRUD application from the provided wireframes using TDD. For acceptance tests use [Protractor](https://angular.github.io/protractor/#/). For unit tests use [Mocha](https://mochajs.org/) with [Chai](http://chaijs.com/).
 1. Use Git to commit your new application and push it to a remote repository (either your fork of this problem set or a new repository).
+1. [stretch] Use sinon to mock express and monk to write unit tests for your routes.
 1. [stretch] In Agile software development, it is important to understand who the users of a system are. As we will see later on, a way to do this is to define a set of personas who are basically the users of our system (aka humans). For this exercise we have two personas:
   1. _Gary the Guest_ - Gary is a music fan who has never visited the "OMG Albums!" application before.
   1. _Mary the Music Lover_ - Registered user of the "OMG Albums!" application, she loves music and regularly uses the album catalogue.
