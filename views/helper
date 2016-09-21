@@ -1,0 +1,23 @@
+tbody
+    tr
+        td Hard Rock
+        td Back In Black
+        td acdc
+    tr
+        td Rock
+        td Cosmic Thing
+        td The B-52s
+    tr
+        td Hard Rock
+        td Back In Black
+        td acdc
+
+
+
+        table
+            thead
+            tr
+                th Genre
+                th Album
+                th Artist
+            tr

@@ -1,0 +1,33 @@
+[10:39:53] I/direct - Using ChromeDriver directly...
+[10:39:53] I/launcher - Running 1 instances of WebDriver
+
+
+  Albums CRUD
+    Root Page Tests
+      When I visit the Albums route page
+[0mGET / [32m200 [0m231.444 ms - 225[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.535 ms - 111[0m
+[0mGET /favicon.ico [33m404 [0m16.935 ms - 160[0m
+        ✓ Then I see the "OMG Albums!" in  the h1 tag"
+      When I click the Let me see the RIGHT NOW! link
+after getcurr
+[0mGET / [36m304 [0m16.831 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.123 ms - -[0m
+[0mGET /albums [32m200 [0m15.820 ms - 266[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.483 ms - -[0m
+Promise has been resolved and url is http://localhost:3001/albums
+        ✓ Then I see the albums page
+    When I visit the Albums page
+[0mGET /albums [36m304 [0m17.992 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.887 ms - -[0m
+      ✓ Then I see the Albums in the h1 tag"
+[0mGET /albums [36m304 [0m5.860 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.064 ms - -[0m
+is present
+      ✓ Then I see the albums in a table
+
+
+  4 passing (847ms)
+
+[10:39:55] I/launcher - 0 instance(s) of WebDriver still running
+[10:39:55] I/launcher - chrome #01 passed
